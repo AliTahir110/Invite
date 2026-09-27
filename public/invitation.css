@@ -99,7 +99,20 @@
   width: min(445px, calc(100% - 40px)) !important;
 }
 .framer-ypY08 .framer-19qwjxw {
-  margin-top: 24px;
+  margin-top: 12px;
+}
+.framer-ypY08 .framer-ximwwv {
+  display: none !important;
+}
+.framer-ypY08 .family-invite-line {
+  color: rgb(243, 236, 186);
+  font-family: "Cormorant Upright", "Cormorant Upright Placeholder", serif;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 auto 14px;
+  text-align: center;
+  width: 100%;
 }
 .framer-ypY08 .framer-1vr0dgg {
   height: auto !important;
@@ -122,6 +135,7 @@
 @media (max-width: 809.98px) {
   .framer-ypY08 .framer-g3r35 { padding-top: 664px !important; }
   .framer-ypY08 [data-framer-name="INVITE"] p { font-size: 48px !important; }
+  .framer-ypY08 .family-invite-line { font-size: 22px; margin-bottom: 10px; }
 }
 
 /* A portrait frame at the transition to “meet the bride and groom”. */
