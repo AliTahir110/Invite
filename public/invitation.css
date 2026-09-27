@@ -104,7 +104,9 @@
 .framer-ypY08 .framer-ximwwv {
   display: none !important;
 }
-.framer-ypY08 .family-invite-line {
+.framer-ypY08 .framer-19qwjxw::before {
+  content: "Naved Tahir & Uroos Rizvi";
+  display: block;
   color: rgb(243, 236, 186);
   font-family: "Cormorant Upright", "Cormorant Upright Placeholder", serif;
   font-size: 30px;
@@ -135,7 +137,7 @@
 @media (max-width: 809.98px) {
   .framer-ypY08 .framer-g3r35 { padding-top: 664px !important; }
   .framer-ypY08 [data-framer-name="INVITE"] p { font-size: 48px !important; }
-  .framer-ypY08 .family-invite-line { font-size: 22px; margin-bottom: 10px; }
+  .framer-ypY08 .framer-19qwjxw::before { font-size: 22px; margin-bottom: 10px; }
 }
 
 /* A portrait frame at the transition to “meet the bride and groom”. */
