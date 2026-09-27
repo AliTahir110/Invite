@@ -474,47 +474,77 @@ Thank you for being a part of our journeywe look forward to celebrating our love
     (() => {
       let wantsMusic = true;
       let lifecyclePause = false;
+      let resumeTimer;
 
       const audios = () => [...document.querySelectorAll("audio.framer-audio")];
       const isVisible = (audio) => {
-        const box = audio.closest(".ssr-variant") || audio.parentElement;
-        return box && getComputedStyle(box).display !== "none" && box.getClientRects().length > 0;
+        const variant = audio.closest(".ssr-variant");
+        const box = variant || audio.parentElement;
+        return Boolean(box && getComputedStyle(box).display !== "none" && box.getClientRects().length);
       };
       const activeAudio = () => audios().find(isVisible) || audios()[0];
 
-      const stopAll = () => {
+      const pauseAudio = (audio) => {
+        if (audio && !audio.paused) audio.pause();
+      };
+      const pauseEveryAudio = () => audios().forEach(pauseAudio);
+      const stopForLifecycle = () => {
         lifecyclePause = true;
-        audios().forEach((audio) => audio.pause());
+        clearTimeout(resumeTimer);
+        pauseEveryAudio();
       };
 
-      const startMusic = async () => {
-        if (!wantsMusic || document.hidden) return;
+      const bindAudio = (audio) => {
+        if (audio.dataset.singleAudioBound) return;
+        audio.dataset.singleAudioBound = "true";
+        audio.preload = "auto";
+        audio.loop = true;
+        audio.addEventListener("play", () => {
+          if (document.hidden || lifecyclePause) {
+            pauseAudio(audio);
+            return;
+          }
+          // Framer renders more than one responsive player. Never allow two to play.
+          audios().forEach((other) => {
+            if (other !== audio) pauseAudio(other);
+          });
+        });
+      };
+
+      const bindAllAudio = () => audios().forEach(bindAudio);
+
+      const startOneAudio = async () => {
+        clearTimeout(resumeTimer);
+        bindAllAudio();
+        if (!wantsMusic || document.hidden || lifecyclePause) return;
         const active = activeAudio();
         audios().forEach((audio) => {
-          if (audio !== active) audio.pause();
+          if (audio !== active) pauseAudio(audio);
         });
         if (!active) return;
         active.volume = 0.7;
-        try { await active.play(); } catch (_) { /* A first tap may be required. */ }
+        try { await active.play(); } catch (_) { /* Audible autoplay may require one tap. */ }
       };
 
-      const bindAudioState = () => {
-        audios().forEach((audio) => {
-          if (audio.dataset.lifecycleBound) return;
-          audio.dataset.lifecycleBound = "true";
-          audio.addEventListener("play", () => {
-            if (!lifecyclePause && isVisible(audio)) wantsMusic = true;
-          });
-          audio.addEventListener("pause", () => {
-            if (!lifecyclePause && !document.hidden && isVisible(audio)) wantsMusic = false;
-          });
-        });
+      const resumeOneAudio = () => {
+        lifecyclePause = false;
+        clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(startOneAudio, 120);
       };
 
       const initialize = () => {
-        bindAudioState();
-        lifecyclePause = false;
-        startMusic();
+        bindAllAudio();
+        resumeOneAudio();
+        new MutationObserver(() => {
+          bindAllAudio();
+          const playing = audios().filter((audio) => !audio.paused);
+          if (playing.length > 1) {
+            const keep = activeAudio() || playing[0];
+            playing.forEach((audio) => {
+              if (audio !== keep) pauseAudio(audio);
+            });
+          }
+        }).observe(document.body, { childList: true, subtree: true });
       };
 
       if (document.readyState === "loading") {
@@ -523,30 +553,41 @@ Thank you for being a part of our journeywe look forward to celebrating our love
         initialize();
       }
 
-      // Mobile browsers permit sound only after a user gesture when autoplay is blocked.
-      const unlock = () => setTimeout(() => {
-        bindAudioState();
-        lifecyclePause = false;
-        startMusic();
-      }, 0);
+      // Retry after the first gesture when a mobile browser blocks audible autoplay.
+      const unlock = () => setTimeout(startOneAudio, 0);
       document.addEventListener("pointerdown", unlock, { once: true, capture: true });
       document.addEventListener("touchstart", unlock, { once: true, capture: true, passive: true });
       document.addEventListener("keydown", unlock, { once: true, capture: true });
 
+      // Preserve the visitor's manual play/pause choice.
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest?.(".framer-bt19rz-container")) return;
+        setTimeout(() => {
+          const active = activeAudio();
+          wantsMusic = Boolean(active && !active.paused);
+          if (!wantsMusic) pauseEveryAudio();
+        }, 80);
+      });
+
+      // Stop before opening Maps, WhatsApp, or any other external app/site.
+      document.addEventListener("click", (event) => {
+        const link = event.target.closest?.("a[href]");
+        if (!link) return;
+        try {
+          const destination = new URL(link.href, location.href);
+          if (destination.origin !== location.origin) stopForLifecycle();
+        } catch (_) {}
+      }, true);
+
       document.addEventListener("visibilitychange", () => {
-        if (document.hidden) {
-          stopAll();
-        } else {
-          lifecyclePause = false;
-          startMusic();
-        }
+        if (document.hidden) stopForLifecycle();
+        else resumeOneAudio();
       });
-      window.addEventListener("pagehide", stopAll);
-      window.addEventListener("beforeunload", stopAll);
-      window.addEventListener("pageshow", () => {
-        lifecyclePause = false;
-        startMusic();
-      });
+      window.addEventListener("blur", stopForLifecycle);
+      window.addEventListener("focus", resumeOneAudio);
+      window.addEventListener("pagehide", stopForLifecycle);
+      window.addEventListener("beforeunload", stopForLifecycle);
+      window.addEventListener("pageshow", resumeOneAudio);
     })();
     </script>
     <script>
