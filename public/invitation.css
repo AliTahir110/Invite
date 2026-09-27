@@ -1,0 +1,204 @@
+/* Give the blessing and invitation space below the fountain artwork. */
+.framer-ypY08 .framer-pOxAR [data-framer-name="Event name"] p {
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+}
+.framer-ypY08 .framer-pOxAR .framer-1ag4aq {
+  width: 76% !important;
+  max-width: 300px;
+  gap: 4px !important;
+  align-items: center !important;
+  padding: 0 !important;
+  top: 53% !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Date and day"],
+.framer-ypY08 .framer-pOxAR [data-framer-name="Venue"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  white-space: normal !important;
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Date and day"] p,
+.framer-ypY08 .framer-pOxAR [data-framer-name="Venue"] p {
+  --framer-text-alignment: center !important;
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  text-align: center !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Date and day"] p {
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Venue"] p {
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Time"] p {
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Date and day"] {
+  min-height: 38px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Venue"] {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Time"] {
+  min-height: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: center !important;
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  margin: 2px auto 0 !important;
+  transform: none !important;
+  text-align: center !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Time"] p {
+  width: 100% !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Map link"] {
+  transform: translateY(28px) !important;
+}
+
+/* Removed source-template sections. */
+.framer-ypY08 [data-framer-name="Weather"],
+.framer-ypY08 .framer-ztdgvp-container {
+  display: none !important;
+}
+.framer-ypY08 .framer-g3r35 {
+  padding-top: 1147px !important;
+}
+.framer-ypY08 .framer-1mr32yl-container {
+  width: min(445px, calc(100% - 40px)) !important;
+}
+.framer-ypY08 .framer-19qwjxw {
+  margin-top: 24px;
+}
+.framer-ypY08 .framer-1vr0dgg {
+  height: auto !important;
+  text-align: center;
+}
+.framer-ypY08 [data-framer-name="INVITE"] p {
+  font-size: 64px !important;
+  line-height: 1.15 !important;
+}
+.framer-ypY08 .framer-19djrwi p {
+  line-height: 1.4 !important;
+}
+.framer-ypY08 .framer-ximwwv {
+  max-width: 100%;
+  white-space: normal !important;
+}
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .framer-ypY08 .framer-g3r35 { padding-top: 1070px !important; }
+}
+@media (max-width: 809.98px) {
+  .framer-ypY08 .framer-g3r35 { padding-top: 664px !important; }
+  .framer-ypY08 [data-framer-name="INVITE"] p { font-size: 48px !important; }
+}
+
+/* A portrait frame at the transition to “meet the bride and groom”. */
+.framer-ypY08 .framer-1fmh1rq {
+  height: 100px !important;
+  padding: 0 !important;
+}
+.framer-ypY08 .framer-1108fp {
+  height: auto !important;
+  padding: 35px 0 !important;
+  overflow: visible !important;
+}
+.framer-ypY08 :is(.framer-1nlnwa4, .framer-1bgbwwx, .framer-1gfw8ii) {
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  width: min(390px, 84vw) !important;
+  height: auto !important;
+  aspect-ratio: 1087 / 1447 !important;
+  margin: 0 auto;
+  border: 8px solid #eee5d2;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f7f0df, #e9ddc4 60%, #f2ead8);
+  box-shadow: 0 12px 28px #30251c26, 0 2px 5px #30251c12;
+}
+.framer-ypY08 :is(.framer-1nlnwa4, .framer-1bgbwwx, .framer-1gfw8ii) > [data-framer-background-image-wrapper] {
+  inset: 9px !important;
+  border-radius: 9px !important;
+  overflow: hidden;
+}
+.framer-ypY08 :is(.framer-1nlnwa4, .framer-1bgbwwx, .framer-1gfw8ii) img {
+  object-fit: contain !important;
+  object-position: center !important;
+}
+.framer-ypY08 :is(.framer-1nlnwa4, .framer-1bgbwwx, .framer-1gfw8ii)::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  z-index: 3;
+  pointer-events: none;
+  background: url('/assets/antique-portrait-frame.svg') center / 100% 100% no-repeat;
+}
+.framer-ypY08 :is(.framer-1nlnwa4, .framer-1bgbwwx, .framer-1gfw8ii)::after {
+  content: none;
+}
+.framer-ypY08 .framer-xzyr5 { padding-top: 80px !important; }
+@media (max-width: 809.98px) {
+  .framer-ypY08 .framer-1fmh1rq { height: 80px !important; }
+  .framer-ypY08 :is(.framer-1nlnwa4, .framer-1bgbwwx, .framer-1gfw8ii) { width: min(320px, 82vw) !important; }
+  .framer-ypY08 .framer-xzyr5 { padding-top: 60px !important; }
+}
+
+/* Second framed portrait replaces the car before the guest information. */
+.framer-ypY08 .framer-1bgbwwx { aspect-ratio: 2 / 3 !important; }
+.framer-ypY08 .framer-djlixf {
+  height: auto !important;
+  padding: 40px 0 70px !important;
+  overflow: visible !important;
+}
+.framer-ypY08 .framer-ml4rg2 { padding-bottom: 100px !important; }
+@media (max-width: 809.98px) {
+  .framer-ypY08 .framer-ml4rg2 { padding-bottom: 80px !important; }
+}
+
+/* Final portrait before the countdown, retaining the full bridal image. */
+.framer-ypY08 .framer-1gfw8ii {
+  aspect-ratio: 1290 / 2005 !important;
+  width: min(350px, 76vw) !important;
+  border-color: #244b50;
+  background: linear-gradient(135deg, #3c6666, #183e48 60%, #30595a);
+  box-shadow: 0 14px 30px #102e3a38, 0 2px 6px #102e3a24;
+}
+@media (max-width: 809.98px) {
+  .framer-ypY08 .framer-1gfw8ii { width: min(285px, 74vw) !important; }
+}
+.framer-ypY08 .framer-enaf33 {
+  height: auto !important;
+  padding: 40px 0 70px !important;
+  overflow: visible !important;
+}
