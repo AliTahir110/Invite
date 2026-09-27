@@ -549,6 +549,37 @@ Thank you for being a part of our journeywe look forward to celebrating our love
       });
     })();
     </script>
+    <script>
+    (() => {
+      const whatsappUrl = "https://wa.me/919454268942?utm_source=chatgpt.com";
+      const selector = ".framer-14o4vrh-container a";
+
+      const updateWhatsappButtons = () => {
+        document.querySelectorAll(selector).forEach((button) => {
+          button.href = whatsappUrl;
+          button.target = "_blank";
+          button.rel = "noopener noreferrer";
+          button.setAttribute("aria-label", "Chat with us on WhatsApp");
+        });
+      };
+
+      updateWhatsappButtons();
+      new MutationObserver(updateWhatsappButtons).observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+
+      // Framer hydration can retain the template URL in its click handler.
+      // Handle this specific RSVP button before that handler runs.
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest?.(selector);
+        if (!button) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      }, true);
+    })();
+    </script>
     <!-- End of bodyEnd -->
 </body>
 </html>
