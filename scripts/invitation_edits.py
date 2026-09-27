@@ -57,7 +57,7 @@ def personalize(source):
         removed = 'Lt. Syed Anwar Abbas Zaidi ' + ampersand + ' Mrs. Fakhrun Nisa'
         source = source.replace('\\n' + removed, '').replace('\n' + removed, '').replace(removed, '')
         source = source.replace('Dr. Tanveer Tahir ' + ampersand + ' Mrs. Zeba Tahir',
-                                'Naved Tahir ' + ampersand + ' Uroos Rizvi')
+                                'Mr. Naved Tahir ' + ampersand + ' Mrs. Uroos Rizvi')
     return source
 
 def add_styles(source):
