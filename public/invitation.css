@@ -218,3 +218,32 @@
   padding: 40px 0 70px !important;
   overflow: visible !important;
 }
+
+/* Compact final countdown on an uninterrupted starry sky. */
+.framer-ypY08 .framer-9g85ud {
+  height: auto !important;
+  min-height: 620px;
+  padding: 0 0 80px !important;
+  overflow: hidden !important;
+  background: #102f46 url('/assets/starry-night-footer.png') center / cover no-repeat !important;
+}
+.framer-ypY08 .framer-9g85ud > [data-framer-background-image-wrapper] {
+  display: none !important;
+}
+.framer-ypY08 .framer-9g85ud .framer-pgbn8c {
+  gap: 38px !important;
+  padding: 45px 80px 55px !important;
+}
+.framer-ypY08 .framer-9g85ud .framer-1fn3s1i {
+  gap: 28px !important;
+}
+@media (max-width: 809.98px) {
+  .framer-ypY08 .framer-9g85ud {
+    min-height: 540px;
+    padding-bottom: 55px !important;
+  }
+  .framer-ypY08 .framer-9g85ud .framer-pgbn8c {
+    gap: 30px !important;
+    padding: 32px 28px 42px !important;
+  }
+}
