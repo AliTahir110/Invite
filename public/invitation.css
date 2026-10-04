@@ -407,3 +407,19 @@
   .framer-ypY08 .framer-1baysq9 p { font-size: 34px !important; line-height: 1.25 !important; }
   .framer-ypY08 .framer-1lhqgx3 p { font-size: 16px !important; }
 }
+
+/* Bring guest information closer to the preceding portrait. */
+.framer-ypY08 .framer-djlixf { padding-bottom: 35px !important; }
+.framer-ypY08 .framer-1xxj9lg { padding-top: 30px !important; }
+.framer-ypY08 .event-photo-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #555a25 !important;
+  font-weight: 600;
+  text-decoration: underline !important;
+  text-underline-offset: 5px;
+  line-height: 1.5;
+}
+@media (max-width: 809.98px) {
+  .framer-ypY08 .framer-1xxj9lg { padding-top: 65px !important; }
+}
