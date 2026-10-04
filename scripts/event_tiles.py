@@ -6,7 +6,7 @@ import re
 import json
 
 EVENTS = [
-    ('Manjha', 'Saturday, 9th January, 2027', 'Hotel Charans Habibullah Estate, 11, Hazratganj, Lucknow', '6 pm', 'https://maps.app.goo.gl/hKYXudu8ky3fgNrx6'),
+    ('Manjha & Mehndi', 'Saturday, 9th January, 2027', 'Hotel Charans Habibullah Estate, 11, Hazratganj, Lucknow', '6 pm', 'https://maps.app.goo.gl/hKYXudu8ky3fgNrx6'),
     ('Nikah Ceremony', 'Monday, 11th January, 2027', 'Shah Najaf Imam Bara, Hazratganj, Lucknow', '3 pm', 'https://www.google.com/maps/place/Shah+Najaf+Imam+Bara/@26.8578032,80.9436443,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd0b25000a27:0xe9fe770ae5a2e55b!8m2!3d26.8578032!4d80.9462192!16s%2Fm%2F0wzxwgm?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D'),
     ('Nikah Reception', 'Tuesday, 12th January, 2027', 'Balrampur Gardens, Ashok Marg, Hazratganj, Lucknow', '7:30 pm', 'https://www.google.com/maps/place/Balrampur+Garden/@26.854854,80.9475689,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd0c3ba16e03:0x3255312237e4f1cc!8m2!3d26.854854!4d80.9501438!16s%2Fg%2F1tykssny?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D'),
 ]
