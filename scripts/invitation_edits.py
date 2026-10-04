@@ -60,9 +60,9 @@ def personalize(source):
     source = source.replace('>Son of<', '><')
 
     # RSVP contact and custom footer credit.
-    source = source.replace('+44 7732795991', '+91 9454268942')
-    source = source.replace('https://wa.me/91XXXXXXXXXX', 'https://wa.me/919454268942?utm_source=chatgpt.com')
-    source = source.replace('tel:+919454268942', 'https://wa.me/919454268942?utm_source=chatgpt.com')
+    source = source.replace('+44 7732795991', '+91 9151155786')
+    source = source.replace('https://wa.me/91XXXXXXXXXX', 'https://wa.me/919151155786?utm_source=chatgpt.com')
+    source = source.replace('tel:+919151155786', 'https://wa.me/919151155786?utm_source=chatgpt.com')
     source = source.replace('© Missing Piece 2026 ', 'Made by')
     source = source.replace('© Missing Piece 2026', 'Made by')
     source = source.replace('Get your wedding invite from', '')

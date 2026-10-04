@@ -423,3 +423,7 @@
 @media (max-width: 809.98px) {
   .framer-ypY08 .framer-1xxj9lg { padding-top: 65px !important; }
 }
+
+/* RSVP opens the WhatsApp chat directly; retire the template QR popover. */
+.framer-a3c2ep { display: none !important; }
+.framer-ypY08 .framer-stokf1-container { cursor: pointer; }
