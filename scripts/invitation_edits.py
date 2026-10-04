@@ -2,6 +2,17 @@
 import re
 
 def personalize(source):
+    source = source.replace(
+        'With the heavenly blessings of',
+        'In the name of Allah, the Most Gracious, the Most Merciful,'
+    )
+    source = source.replace(
+        'Lt. Mr. Tahir Hussain & Lt. Mrs. Hamida Bano\\nLt. Mr. Mohsin Rizvi & Lt. Gunguna Rizvi',
+        'and with the blessings of the Fourteen Masoomeen (a.s)'
+    ).replace(
+        'Lt. Mr. Tahir Hussain &amp; Lt. Mrs. Hamida Bano\nLt. Mr. Mohsin Rizvi &amp; Lt. Gunguna Rizvi',
+        'and with the blessings of the Fourteen Masoomeen (a.s)'
+    )
     # Nikah countdown: 11 January 2027, 3:00 pm India Standard Time.
     source = source.replace('2026-03-21T00:00:00.000Z', '2027-01-11T15:00:00+05:30')
     source = source.replace('2026-05-21T00:00:00.000Z', '2027-01-11T15:00:00+05:30')
