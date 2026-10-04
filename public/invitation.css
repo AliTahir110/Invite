@@ -1,12 +1,13 @@
 /* Give the blessing and invitation space below the fountain artwork. */
 .framer-ypY08 .framer-pOxAR [data-framer-name="Event name"] p {
-  font-size: 18px !important;
+  font-size: 22px !important;
   line-height: 1.2 !important;
+  font-weight: 500 !important;
 }
 .framer-ypY08 .framer-pOxAR .framer-1ag4aq {
-  width: 76% !important;
-  max-width: 300px;
-  gap: 4px !important;
+  width: 84% !important;
+  max-width: 360px;
+  gap: 7px !important;
   align-items: center !important;
   padding: 0 !important;
   top: 53% !important;
@@ -42,16 +43,16 @@
   text-align: center !important;
 }
 .framer-ypY08 .framer-pOxAR [data-framer-name="Date and day"] p {
-  font-size: 16px !important;
-  line-height: 1.2 !important;
+  font-size: 18px !important;
+  line-height: 1.28 !important;
 }
 .framer-ypY08 .framer-pOxAR [data-framer-name="Venue"] p {
-  font-size: 14px !important;
-  line-height: 1.2 !important;
+  font-size: 17px !important;
+  line-height: 1.28 !important;
 }
 .framer-ypY08 .framer-pOxAR [data-framer-name="Time"] p {
-  font-size: 14px !important;
-  line-height: 1.2 !important;
+  font-size: 17px !important;
+  line-height: 1.25 !important;
 }
 .framer-ypY08 .framer-pOxAR [data-framer-name="Date and day"] {
   min-height: 38px;
@@ -84,7 +85,16 @@
   text-align: center !important;
 }
 .framer-ypY08 .framer-pOxAR [data-framer-name="Map link"] {
-  transform: translateY(28px) !important;
+  transform: translateY(14px) !important;
+}
+.framer-ypY08 .framer-pOxAR [data-framer-name="Map link"] p,
+.framer-ypY08 .framer-pOxAR [data-framer-name="Map link"] a {
+  font-size: 17px !important;
+  line-height: 1.25 !important;
+  font-weight: 500 !important;
+}
+.framer-ypY08 [data-framer-name="Mehndi"] [data-framer-name="Time"] {
+  display: none !important;
 }
 
 /* Removed source-template sections. */
@@ -94,6 +104,50 @@
 }
 .framer-ypY08 .framer-g3r35 {
   padding-top: 1147px !important;
+}
+
+/* Remove template space left by the hidden weather tile and sticky RSVP block. */
+.framer-ypY08 .framer-19cqbr9 {
+  padding-bottom: 35px !important;
+}
+.framer-ypY08 .framer-1xxj9lg {
+  height: auto !important;
+  min-height: 0 !important;
+  gap: 45px !important;
+  padding-bottom: 20px !important;
+}
+.framer-ypY08 .framer-leke3q {
+  height: auto !important;
+  gap: 24px !important;
+  padding: 0 0 35px !important;
+}
+.framer-ypY08 .framer-jv55we,
+.framer-ypY08 .framer-1aw99ox {
+  position: relative !important;
+  top: auto !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 25px !important;
+}
+.framer-ypY08 .framer-1nq83cm {
+  height: auto !important;
+  min-height: 0 !important;
+  padding-bottom: 35px !important;
+}
+@media (max-width: 809.98px) {
+  .framer-ypY08 .framer-pOxAR .framer-1ag4aq {
+    width: 86% !important;
+    gap: 6px !important;
+  }
+  .framer-ypY08 .framer-pOxAR [data-framer-name="Event name"] p { font-size: 20px !important; }
+  .framer-ypY08 .framer-pOxAR [data-framer-name="Date and day"] p { font-size: 17px !important; }
+  .framer-ypY08 .framer-pOxAR [data-framer-name="Venue"] p,
+  .framer-ypY08 .framer-pOxAR [data-framer-name="Time"] p,
+  .framer-ypY08 .framer-pOxAR [data-framer-name="Map link"] p,
+  .framer-ypY08 .framer-pOxAR [data-framer-name="Map link"] a { font-size: 16px !important; }
+  .framer-ypY08 .framer-1xxj9lg { gap: 32px !important; padding-bottom: 10px !important; }
+  .framer-ypY08 .framer-leke3q { padding-bottom: 20px !important; }
+  .framer-ypY08 .framer-1nq83cm { padding-bottom: 20px !important; }
 }
 .framer-ypY08 .framer-1mr32yl-container {
   width: min(445px, calc(100% - 40px)) !important;
