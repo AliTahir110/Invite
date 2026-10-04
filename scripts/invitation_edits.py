@@ -2,6 +2,23 @@
 import re
 
 def personalize(source):
+    old_welcome = (
+        'We are truly delighted to celebrate this beautiful milestone with you. '
+        'Your love, blessings, and heartfelt wishes have meant so much to us, and we feel incredibly grateful '
+        'to be surrounded by such wonderful family and friends.\n\n'
+        'As we begin this new chapter together, it brings us great joy to share these special moments with you. '
+        'Your presence will make our day even more meaningful, and we cannot wait to create unforgettable memories together.\n\n'
+        'Thank you for being a part of our journeywe look forward to celebrating our love with you. 💛'
+    )
+    new_welcome = (
+        'With immense joy and gratitude, we invite you to celebrate this beautiful milestone in the lives of our children.\n\n'
+        'Your love, blessings, and good wishes have always meant a great deal to our family. As they embark upon this new '
+        'chapter together, it brings us great happiness to share these cherished moments with our dear family and friends.\n\n'
+        'Your presence and blessings will make this joyous occasion even more special and memorable for us.\n\n'
+        'We look forward to celebrating this beautiful beginning with you and seeking your blessings for the happy couple.'
+    )
+    source = source.replace(old_welcome, new_welcome)
+    source = source.replace(old_welcome.replace('\n', '\\n'), new_welcome.replace('\n', '\\n'))
     source = source.replace(
         'With the heavenly blessings of',
         'In the name of Allah, the Most Gracious, the Most Merciful,'
