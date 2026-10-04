@@ -4,6 +4,7 @@
   audio.loop = true;
   audio.volume = 0.7;
   audio.preload = 'auto';
+  audio.autoplay = true;
   let wanted = true;
   let suspended = document.hidden;
   let generation = 0;
@@ -51,6 +52,12 @@
     if (wanted) resume(); else stop();
   }
   window.invitationMusic = { stop };
+  const unlock = event => {
+    if (event.target.closest?.('.framer-bt19rz-container, a[href], .framer-stokf1-container')) return;
+    start();
+  };
+  document.addEventListener('pointerdown', unlock, { capture: true, passive: true });
+  document.addEventListener('touchend', unlock, { capture: true, passive: true });
   document.addEventListener('click', event => {
     if (event.target.closest?.('.framer-bt19rz-container')) return toggle(event);
     const link = event.target.closest?.('a[href]');
@@ -63,6 +70,7 @@
   }, true);
   document.addEventListener('keydown', event => {
     if (['Enter', ' '].includes(event.key) && event.target.closest?.('.framer-bt19rz-container')) toggle(event);
+    else unlock(event);
   }, true);
   document.addEventListener('visibilitychange', () => document.hidden ? stop() : resume());
   document.addEventListener('freeze', stop);
@@ -76,6 +84,8 @@
     update();
   });
   audio.addEventListener('pause', update);
+  audio.addEventListener('canplay', start);
+  window.addEventListener('load', start);
   new MutationObserver(update).observe(document.body, { childList: true, subtree: true });
   update();
   start();
