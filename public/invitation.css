@@ -545,3 +545,35 @@
   text-underline-offset: 3px;
   padding: 6px 0;
 }
+
+.framer-ypY08 .photo-access-form {
+  width: min(360px, 100%);
+  margin: 22px auto 0;
+  color: #555a25;
+  font-family: "Yaldevi", sans-serif;
+  text-align: center;
+}
+.framer-ypY08 .photo-access-form label { display: block; font-size: 15px; line-height: 1.5; }
+.framer-ypY08 .photo-access-form input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 10px 0 12px;
+  padding: 12px 14px;
+  border: 1px solid #898d4f;
+  border-radius: 10px;
+  background: #f8f5da;
+  color: #454a20;
+  font: 16px/1.5 sans-serif;
+}
+.framer-ypY08 .photo-access-form input:focus { outline: 2px solid #656c30; outline-offset: 3px; }
+.framer-ypY08 .photo-access-form button {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #555a25;
+  border-radius: 24px;
+  background: #636a32;
+  color: #fffce7;
+  font: 14px/1.5 "Yaldevi", sans-serif;
+  cursor: pointer;
+}
