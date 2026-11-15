@@ -495,3 +495,23 @@
   max-width: 125px !important;
   font-size: 16px !important;
 }
+
+/* Framer animates each word in a span: preserve each word as one line. */
+.framer-ypY08 [data-framer-name="Nikkah Ceremony"] [data-framer-name="Event name"] {
+  width: 70% !important;
+  max-width: 220px !important;
+}
+.framer-ypY08 [data-framer-name="Nikkah Ceremony"] [data-framer-name="Event name"] p {
+  width: 100% !important;
+  max-width: 100% !important;
+  font-size: 17px !important;
+  line-height: 1.4 !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
+.framer-ypY08 [data-framer-name="Nikkah Ceremony"] [data-framer-name="Event name"] p > span {
+  display: block !important;
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+}
