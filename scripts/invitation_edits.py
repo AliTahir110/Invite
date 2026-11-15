@@ -67,7 +67,7 @@ def personalize(source):
     source = source.replace('© Missing Piece 2026', 'Made by')
     source = source.replace('Get your wedding invite from', '')
     source = source.replace('https://www.missingpieceinvites.com', 'https://portfolio-website-h1jg.onrender.com')
-    source = source.replace('missingpieceinvites.com', 'View portfolio')
+    source = source.replace('missingpieceinvites.com', 'Ali Tahir')
     source = re.sub(
         r'(?:https://framerusercontent\.com/images/|/assets/[a-f0-9]+-)22xXcSSm9sQYXLb74vUWOaNwXY\.png(?:\?[^\s\"\x27`<>]*)?',
         '/assets/bridal-blessing.jpg', source)
