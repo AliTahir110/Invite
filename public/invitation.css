@@ -433,11 +433,11 @@
   width: min(560px, calc(100vw - 48px));
   margin: 22px auto 30px;
   padding: 30px;
-  border: 1px solid #dfd4b5;
+  border: 1px solid #d2a6bc;
   border-radius: 20px;
-  background: #f5f0e6;
-  color: #615339;
-  box-shadow: 0 8px 24px #44341818;
+  background: #f5e6ef;
+  color: #67445c;
+  box-shadow: 0 8px 24px #663e5d20;
   position: relative;
   z-index: 3;
 }
@@ -448,13 +448,13 @@
   width: 100%;
   margin-top: 12px;
   padding: 15px 16px;
-  border: 1px solid #d8c8a7;
+  border: 1px solid #cda4bd;
   border-radius: 12px;
-  background: #fffdf9;
-  color: #403726;
+  background: #fff8fc;
+  color: #573c50;
   font: 17px/1.5 Georgia, serif;
 }
-.guest-rsvp input:focus { outline: 2px solid #8b794f; outline-offset: 3px; }
+.guest-rsvp input:focus { outline: 2px solid #945f86; outline-offset: 3px; }
 .guest-rsvp button {
   display: flex;
   align-items: center;
@@ -465,14 +465,14 @@
   padding: 18px 20px;
   border: 0;
   border-radius: 40px;
-  background: linear-gradient(100deg, #604d29, #85734f);
-  color: #fffdf6;
+  background: linear-gradient(100deg, #79506e, #9b718f);
+  color: #fff7fc;
   font: 18px/1.4 Georgia, serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   cursor: pointer;
 }
-.guest-rsvp p { margin: 20px 0 0; font: italic 17px/1.6 Georgia, serif; text-align: center; color: #706b62; }
+.guest-rsvp p { margin: 20px 0 0; font: italic 17px/1.6 Georgia, serif; text-align: center; color: #75556c; }
 @media(max-width: 600px) {
   .guest-rsvp { padding: 24px 20px; }
   .guest-rsvp button { font-size: 15px; letter-spacing: 2px; }

@@ -12,7 +12,7 @@
         const name = input.value.trim();
         if (!name) { input.value = ''; input.reportValidity(); return; }
         window.invitationMusic?.stop();
-        const message = `Assalamu Alaikum! This is ${name}. Thank you for inviting me to Zernab & Arman's wedding celebrations. I would like to RSVP.`;
+        const message = `Hello! This is ${name}. Thank you for inviting me to Zernab & Arman's wedding celebrations. I would like to RSVP.`;
         window.open('https://wa.me/919151155786?text=' + encodeURIComponent(message), '_blank', 'noopener,noreferrer');
       });
       host.insertAdjacentElement('afterend', form);
