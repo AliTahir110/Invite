@@ -515,3 +515,19 @@
   word-break: keep-all !important;
   overflow-wrap: normal !important;
 }
+
+/* Remove the phone template's unpainted 150px section padding. */
+@media (max-width: 809.98px) {
+  .framer-ypY08 .framer-o0d80n {
+    padding-bottom: 0 !important;
+    gap: 0 !important;
+  }
+  .framer-ypY08 .framer-1fmh1rq {
+    height: 28px !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+  .framer-ypY08 .framer-1108fp {
+    padding-top: 28px !important;
+  }
+}
