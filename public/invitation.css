@@ -531,3 +531,17 @@
     padding-top: 28px !important;
   }
 }
+
+.framer-ypY08 .photo-access-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 14px auto 0;
+  color: #555a25 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  text-align: center;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  padding: 6px 0;
+}
