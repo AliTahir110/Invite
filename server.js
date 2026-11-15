@@ -12,7 +12,7 @@ http.createServer((req, res) => {
   if (!file.startsWith(root + path.sep)) { res.writeHead(403).end(); return; }
   fs.stat(file, (err, stat) => {
     if (err || !stat.isFile()) { res.writeHead(404).end('Not found'); return; }
-    res.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream', 'Content-Length': stat.size });
+    res.writeHead(200, { 'Content-Type': mime[path.extname(file)] || 'application/octet-stream', 'Content-Length': stat.size, 'Cache-Control': 'no-store' });
     if (req.method === 'HEAD') res.end(); else fs.createReadStream(file).pipe(res);
   });
 }).listen(Number(process.env.PORT || 3000), '127.0.0.1', () => console.log(`Wedding invitation: http://localhost:${process.env.PORT || 3000}/bride/mehendireception`));

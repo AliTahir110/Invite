@@ -8,7 +8,7 @@ import json
 EVENTS = [
     ('Manjha', 'Saturday, 9th January, 2027', 'Kaiserbagh 1 Avenue, next to Awadh Residency Pariwartan Chowk, Lucknow', '6 pm onwards', 'https://maps.app.goo.gl/F3mHBbc1vwvWmAxo9'),
     ('Mehndi', '10th January, 2027', 'Kaiserbagh 1 Avenue, next to Awadh Residency Pariwartan Chowk, Lucknow', '', 'https://maps.app.goo.gl/F3mHBbc1vwvWmAxo9'),
-    ('Nikkah', 'Tuesday, 12th January, 2027', 'Balrampur Gardens, Ashok Marg, Hazratganj, Lucknow', '7:30 pm', 'https://www.google.com/maps/place/Balrampur+Garden/@26.854854,80.9475689,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd0c3ba16e03:0x3255312237e4f1cc!8m2!3d26.854854!4d80.9501438!16s%2Fg%2F1tykssny?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D'),
+    ('Nikkah Ceremony', 'Tuesday, 12th January, 2027', 'Balrampur Gardens, Ashok Marg, Hazratganj, Lucknow', '7:30 pm', 'https://www.google.com/maps/place/Balrampur+Garden/@26.854854,80.9475689,17z/data=!3m1!4b1!4m6!3m5!1s0x399bfd0c3ba16e03:0x3255312237e4f1cc!8m2!3d26.854854!4d80.9501438!16s%2Fg%2F1tykssny?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D'),
 ]
 TEMPLATES = json.loads(Path(__file__).with_name('event-templates.json').read_text())
 
